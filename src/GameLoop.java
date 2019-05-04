@@ -1,11 +1,22 @@
+import java.awt.*; // sper ca compilatorul selecteaza doar ce se foloseste de aici
+import java.awt.image.BufferStrategy;
+import java.util.ArrayList;
+
 public class GameLoop extends Thread
 {
+    private ArrayList<GameComponent> listeners = new ArrayList<GameComponent>();
     private static GameLoop _instance = new GameLoop();
-    static int MAX_FPS = 100;
+    private boolean running = false;
+    public static int MAX_FPS = 100;
 
     public static GameLoop getInstance()
     {
         return GameLoop._instance;
+    }
+
+    public boolean AddListener(GameComponent component)
+    {
+        return this.listeners.add(component);
     }
 
     public void run()
@@ -15,15 +26,13 @@ public class GameLoop extends Thread
         int FPS_TIME = 1000000000 / GameLoop.MAX_FPS;
         long LAST_TIME = System.nanoTime();
 
-        // Pentru debug
-        long _time = System.currentTimeMillis();
-        int _frames = 0;
-        int _ticks = 0;
+        this.running = true;
 
-        while(true)
+        while(this.running)
         {
             // Diferenta de timp de la ultima rendare
             long DIFF_TIME = System.nanoTime() - LAST_TIME;
+            this.tick();
 
             // Daca diferenta e mai mare decat timpul unui frame rendam din nou
             if (DIFF_TIME >= FPS_TIME)
@@ -32,34 +41,60 @@ public class GameLoop extends Thread
                 LAST_TIME = System.nanoTime();
 
                 this.render();
-                _frames++;
             }
 
-            this.tick();
-            _ticks++;
-
-
-            // Debug
-
-            if (System.currentTimeMillis() - _time > 1000)
+            try
             {
-                _time = System.currentTimeMillis();
-                System.out.println("FPS" + _frames + ", TPS: " + _ticks);
-                _frames = 0;
-                _ticks = 0;
+                this.sleep(1);
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
             }
         }
+    }
+
+    public void finish()
+    {
+        this.running = false;
     }
 
     // Folosit doar pentru grafica
     private void render()
     {
+        try
+        {
+            Graphics g = GameWindow.getInstance().getGraphics();
+            BufferStrategy bf = GameWindow.getInstance().getBufferStrategy();
 
+            // Aparent trebuie mereu renderat background-ul
+            g.setColor(Color.BLACK);
+            g.fillRect(0, 0, GameWindow.getInstance().getScreenSize().width, GameWindow.getInstance().getScreenSize().height);
+
+            for (GameComponent component : this.listeners)
+            {
+                if (component.isVisible())
+                {
+                    component.render(g);
+                }
+            }
+
+            g.dispose();
+            bf.show();
+        }
+        catch(NullPointerException e)
+        {
+            // Se ajunge aici pentru ca nu s-a initializat inca GameWindow-ul complet, TODO fix it
+            e.printStackTrace();
+        }
     }
 
     // Folosit pentru calcule, logica din spate s.a.m.d
     private void tick()
     {
-
+        for (GameComponent component : this.listeners)
+        {
+            component.tick();
+        }
     }
 }
