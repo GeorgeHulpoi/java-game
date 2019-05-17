@@ -1,8 +1,10 @@
+import Engine.Game.Component;
+
 import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Font;
 
-public class FPS extends GameComponent
+public class FPS extends Component
 {
     private long time = System.currentTimeMillis();
     private int frames = 0;
