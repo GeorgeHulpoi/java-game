@@ -1,5 +1,7 @@
 package Engine.Forms;
 
+import java.awt.*;
+
 public class Rectangle
 {
     protected int x;
@@ -80,6 +82,46 @@ public class Rectangle
         int _y2 = y2 - r2.getHeight();
 
         return (x2 >= x1 && y2 <= y1 && _x2 <= _x1 && _y2 >= _y1);
+    }
+
+    public static boolean inside(Rectangle r, Point p)
+    {
+        int x1 = r.getX();
+        int y1 = r.getY();
+
+        int _x1 = x1 + r.getWidth();
+        int _y1 = y1 - r.getHeight();
+
+        return (p.getX() >= x1 && p.getX() <= _x1 && p.getY() <= y1 && p.getY() >= _y1);
+    }
+
+    public static boolean intersects(Line l, Rectangle r)
+    {
+        Line up = new Line(new Point(r.getX(), r.getY()), new Point(r.getX() + r.getWidth(), r.getY()));
+        if (Line.intersects(up, l))
+        {
+            return true;
+        }
+
+        Line left = new Line(new Point(r.getX(), r.getY()), new Point(r.getX(), r.getY() - r.getHeight()));
+        if (Line.intersects(left, l))
+        {
+            return true;
+        }
+
+        Line bottom = new Line(new Point(r.getX(), r.getY() - r.getHeight()), new Point(r.getX() + r.getWidth(), r.getY() - r.getHeight()));
+        if (Line.intersects(bottom, l))
+        {
+            return true;
+        }
+
+        Line right = new Line(new Point(r.getX() + r.getWidth(),r.getY()), new Point(r.getX() + r.getWidth(), r.getY() - r.getHeight()));
+        if (Line.intersects(right, l))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     @Override

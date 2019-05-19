@@ -1,26 +1,42 @@
-import Engine.Camera;
-import Engine.Controller;
-import Engine.World;
+import Engine.EngineController;
+import Engine.Core.World;
+import Engine.Core.Camera;
+import Engine.Forms.Line;
+import Engine.Forms.WorldLine;
 import Exceptions.InvalidSizeException;
+
+import java.awt.*;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        Controller.getInstance().init();
+        EngineController.getInstance().start();
 
         try
         {
             World world = new World(640 * 3, 640 * 3);
             Camera cam = new Camera(-640/2, 640/2, 640, 640);
 
-            Controller.getInstance().setWorld(world);
-            Controller.getInstance().setCamera(cam);
+            EngineController.getInstance().setWorld(world);
+            EngineController.getInstance().setCamera(cam);
         }
         catch (InvalidSizeException e)
         {
             System.out.println("width si height divizibile cu 2");
         }
+
+        XAxis x = new XAxis();
+        x.setVisible(true);
+
+        YAxis y = new YAxis();
+        y.setVisible(true);
+
+        BiAxis bi = new BiAxis();
+        bi.setVisible(true);
+
+        NBiAxis nbi = new NBiAxis();
+        nbi.setVisible(true);
 
         ImgObj img = new ImgObj();
         img.setVisible(true);

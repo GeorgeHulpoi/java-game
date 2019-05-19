@@ -1,14 +1,13 @@
-package Engine.Game;
+package Engine.Forms;
 
-import Engine.Forms.Rectangle;
+import Engine.Core.Component;
 
-public class Object extends Component
+public class WorldObject extends Component
 {
     protected int x;
     protected int y;
 
-    @Override
-    public boolean isObject()
+    public boolean isWorldObject()
     {
         return true;
     }

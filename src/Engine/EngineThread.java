@@ -1,16 +1,15 @@
-package Engine.Game;
+package Engine;
 
-import Engine.Controller;
-
-public class LoopThread extends Thread
+public class EngineThread extends Thread
 {
-    private LoopThreadCallbacks callback;
+    private EngineThreadCallback callback;
     private boolean running = false;
-    public static int MAX_FPS = 100;
+    public static int MAX_FPS = 108;
 
-    public LoopThread(LoopThreadCallbacks callback)
+    public EngineThread(EngineThreadCallback callback)
     {
         super();
+        // Practic n-are rost sa adaug listeners, oricum nu o sa apelez funcitile in alta parte inafara de controller-ul Engine-ului
         this.callback = callback;
     }
 
@@ -18,7 +17,7 @@ public class LoopThread extends Thread
     {
         // 1 secunda e 10^(-9) ns
         // Deci FPS_TIME e timpul unui frame in nanosecunde
-        int FPS_TIME = 1000000000 / LoopThread.MAX_FPS;
+        int FPS_TIME = 1000000000 / EngineThread.MAX_FPS;
         long LAST_TIME = System.nanoTime();
 
         this.running = true;

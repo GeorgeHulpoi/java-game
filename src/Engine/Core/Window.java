@@ -1,4 +1,4 @@
-package Engine.Game;
+package Engine.Core;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,14 +10,7 @@ public class Window extends JFrame
     private BufferStrategy bs;
     private Graphics g;
 
-    private static Window _instance = new Window();
-
-    public static Window getInstance()
-    {
-        return Window._instance;
-    }
-
-    private Window()
+    public Window()
     {
         // Initializam JFrame-ul
         Dimension screen = this.getScreenSize();

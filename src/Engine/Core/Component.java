@@ -1,7 +1,6 @@
-package Engine.Game;
+package Engine.Core;
 
-import Engine.Controller;
-
+import Engine.EngineController;
 import java.awt.Graphics;
 
 public class Component
@@ -22,10 +21,19 @@ public class Component
 
     public Component()
     {
-        Controller.getInstance().AddComponent(this);
+        EngineController.getInstance().AddComponent(this);
     }
 
-    public boolean isObject()
+    public void destroy()
+    {
+        EngineController.getInstance().RemoveComponent(this);
+    }
+
+    public boolean isWorldObject()
+    {
+        return false;
+    }
+    public boolean isWorldLine()
     {
         return false;
     }

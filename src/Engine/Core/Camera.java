@@ -1,7 +1,8 @@
-package Engine;
+package Engine.Core;
 
+import Engine.EngineController;
 import Engine.Forms.Rectangle;
-import Engine.Game.Window;
+import Engine.Core.Window;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -17,7 +18,7 @@ public class Camera extends Rectangle implements KeyListener
     {
         super(x, y, width, height);
 
-        Window.getInstance().addKeyListener(this);
+        EngineController.getInstance().getWindow().addKeyListener(this);
     }
 
     public void keyTyped(KeyEvent e)
@@ -86,25 +87,25 @@ public class Camera extends Rectangle implements KeyListener
 
         if (UP_PRESSED)
         {
-            ty += 10;
+            ty += 20;
         }
 
         if (LEFT_PRESSED)
         {
-            tx -= 10;
+            tx -= 20;
         }
 
         if (RIGHT_PRESSED)
         {
-            tx += 10;
+            tx += 20;
         }
 
         if (DOWN_PRESSED)
         {
-            ty -= 10;
+            ty -= 20;
         }
 
-        if (Rectangle.inside(Controller.getInstance().getWorld().toRectangle(), new Rectangle(tx, ty, this.width, this.height)))
+        if (Rectangle.inside(EngineController.getInstance().getWorld().toRectangle(), new Rectangle(tx, ty, this.width, this.height)))
         {
             x = tx;
             y = ty;

@@ -1,10 +1,10 @@
-import Engine.Camera;
-import Engine.Controller;
-import Engine.Game.Object;
+import Engine.Core.Camera;
+import Engine.EngineController;
+import Engine.Forms.WorldObject;
 
 import java.awt.*;
 
-public class ImgObj extends Object
+public class ImgObj extends WorldObject
 {
     private int screen_x;
     private int screen_y;
@@ -22,7 +22,7 @@ public class ImgObj extends Object
     @Override
     public void render(Graphics g)
     {
-        Camera cam = Controller.getInstance().getCamera();
+        Camera cam = EngineController.getInstance().getCamera();
         screen_x = x - cam.getX();
         screen_y = cam.getY() - y;
 

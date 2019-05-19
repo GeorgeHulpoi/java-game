@@ -1,4 +1,4 @@
-import Engine.Game.Component;
+import Engine.Core.Component;
 
 import java.awt.Graphics;
 import java.awt.Color;
