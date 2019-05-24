@@ -3,6 +3,7 @@ import Engine.EngineController;
 import Engine.Forms.WorldObject;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class ImgObj extends WorldObject
 {
@@ -16,7 +17,14 @@ public class ImgObj extends WorldObject
         height = 157;
         x = -width/2;
         y = height/2;
-        img = new Image("./assets/images/logo.png");
+        try
+        {
+            img = new Image("./assets/images/logo.png");
+        }
+        catch(IOException e)
+        {
+
+        }
     }
 
     @Override

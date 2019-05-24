@@ -7,7 +7,7 @@ import Engine.Core.Window;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Camera extends Rectangle implements KeyListener
+public class Camera extends Rectangle //implements KeyListener
 {
     private boolean UP_PRESSED = false;
     private boolean LEFT_PRESSED = false;
@@ -18,10 +18,10 @@ public class Camera extends Rectangle implements KeyListener
     {
         super(x, y, width, height);
 
-        EngineController.getInstance().getWindow().addKeyListener(this);
+        //EngineController.getInstance().getWindow().addKeyListener(this);
     }
 
-    public void keyTyped(KeyEvent e)
+   /* public void keyTyped(KeyEvent e)
     {
 
     }
@@ -110,5 +110,5 @@ public class Camera extends Rectangle implements KeyListener
             x = tx;
             y = ty;
         }
-    }
+    }*/
 }

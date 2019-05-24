@@ -3,6 +3,7 @@ import Engine.EngineController;
 import Engine.Forms.WorldObject;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class TLObj extends WorldObject
 {
@@ -17,7 +18,10 @@ public class TLObj extends WorldObject
         width = 148;
         height = 26;
 
-        img = new Image("./assets/images/top_left.png");
+        try {
+            img = new Image("./assets/images/top_left.png");
+        }
+        catch (IOException e) {}
     }
 
     @Override

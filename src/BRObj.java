@@ -3,6 +3,7 @@ import Engine.EngineController;
 import Engine.Forms.WorldObject;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class BRObj extends WorldObject
 {
@@ -18,7 +19,10 @@ public class BRObj extends WorldObject
         x = 640*3/2 - 15 - width;
         y = -640*3/2 + 15 + height;
 
-        img = new Image("./assets/images/bottom_right.png");
+        try {
+            img = new Image("./assets/images/bottom_right.png");
+        }
+        catch (IOException e) {}
     }
 
     @Override

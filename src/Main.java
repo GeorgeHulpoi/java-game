@@ -13,7 +13,7 @@ public class Main
     {
         EngineController.getInstance().start();
 
-        try
+        /*try
         {
             World world = new World(640 * 3, 640 * 3);
             Camera cam = new Camera(-640/2, 640/2, 640, 640);
@@ -53,7 +53,10 @@ public class Main
         BRObj br = new BRObj();
         br.setVisible(true);
 
+        Poly p = new Poly();
+        p.setVisible(true);
+
         FPS fps = new FPS();
-        fps.setVisible(true);
+        fps.setVisible(true);*/
     }
 }

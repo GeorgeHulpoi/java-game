@@ -7,6 +7,8 @@ import Engine.Core.Component;
 import Engine.Forms.Rectangle;
 import Engine.Forms.WorldLine;
 import Engine.Forms.WorldObject;
+import Engine.Forms.WorldPolygon;
+import Game.Controllers.MenuController;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -19,7 +21,8 @@ public class EngineController implements EngineThreadCallback
     private Window window;
     private World world;
     private Camera camera;
-    private ArrayList<Component> components = new ArrayList<Component>();
+    private MenuController menu;
+    //private ArrayList<Component> components = new ArrayList<Component>();
 
     public static EngineController getInstance()
     {
@@ -28,6 +31,7 @@ public class EngineController implements EngineThreadCallback
             instance = new EngineController();
             instance.thread = new EngineThread(instance);
             instance.window = new Window();
+            instance.menu = new MenuController();
         }
         return instance;
     }
@@ -62,7 +66,12 @@ public class EngineController implements EngineThreadCallback
         return this.window;
     }
 
-    public boolean AddComponent(Component component)
+    public MenuController getMenu()
+    {
+        return this.menu;
+    }
+
+    /*public boolean AddComponent(Component component)
     {
         return this.components.add(component);
     }
@@ -70,14 +79,16 @@ public class EngineController implements EngineThreadCallback
     public boolean RemoveComponent(Component component)
     {
         return this.components.remove(component);
-    }
+    }*/
 
     public void tick()
     {
-        for (Component component : this.components)
+        /*for (int i = 0; i < this.components.size(); ++i)
         {
+            Component component = this.components.get(i);
             component.tick();
-        }
+        }*/
+        this.menu.tick();
     }
 
     public void render()
@@ -91,7 +102,9 @@ public class EngineController implements EngineThreadCallback
             g.setColor(Color.BLACK);
             g.fillRect(0, 0, this.window.getScreenSize().width, this.window.getScreenSize().height);
 
-            for (int i = 0; i < this.components.size(); ++i)
+            this.menu.render(g);
+
+            /*for (int i = 0; i < this.components.size(); ++i)
             {
                 Component component = this.components.get(i);
 
@@ -119,7 +132,7 @@ public class EngineController implements EngineThreadCallback
                         component.render(g);
                     }
                 }
-            }
+            }*/
 
             g.dispose();
             bf.show();
