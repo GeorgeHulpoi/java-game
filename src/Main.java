@@ -1,5 +1,3 @@
-package Game;
-
 import Engine.EngineController;
 
 public class Main
