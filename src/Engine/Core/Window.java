@@ -63,4 +63,9 @@ public class Window extends JFrame
     {
         return this.getBufferStrategy().getDrawGraphics();
     }
+
+    public Canvas getCanvas()
+    {
+        return this.canvas;
+    }
 }

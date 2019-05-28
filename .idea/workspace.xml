@@ -2,36 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbdae720-228d-4142-84cc-2a5ca996c92a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Engine/Forms/Polygon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Engine/Forms/WorldPolygon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Engine/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/InvalidPolygon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Controllers/Menu/Button.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Controllers/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Poly.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Engine/Animation/Animation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Engine/Animation/ColorAnimation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Engine/Animation/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Engine/Animation/Types/EaseInOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Engine/Animation/Types/Linear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Engine/Core/GraphicFont.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/BLObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/BLObj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/BRObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/BRObj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/Engine/Core/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/Engine/Core/Camera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/Engine/Core/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/Engine/Core/Component.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/menu_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/menu_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-game/Engine/Core/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/Engine/Core/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java-game/Engine/EngineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/Engine/EngineController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/Engine/Forms/WorldObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/Engine/Forms/WorldObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/Image.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/ImgObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/ImgObj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/TLObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/TLObj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-game/TRObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/TRObj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BLObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BLObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BRObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BRObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Engine/Core/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine/Core/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Engine/Core/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine/Core/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-game/Engine/Forms/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-game/Engine/Forms/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-game/Game/Controllers/Menu/Button.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-game/Game/Controllers/MenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine/Core/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine/Core/Window.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Engine/EngineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine/EngineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Engine/Forms/WorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine/Forms/WorldObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ImgObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImgObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TLObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TLObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TRObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TRObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine/Forms/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine/Forms/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Controllers/Menu/Button.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Controllers/MenuController.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +36,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Engine/EngineController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="85" selection-start-line="85" selection-end-line="89" selection-end-column="11" />
+            <state relative-caret-position="646">
+              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game/Menu/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,29 +58,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Game/Controllers/MenuController.java">
+        <entry file="file://$PROJECT_DIR$/src/Game/Menu/Button.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+            <state relative-caret-position="374">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#274#282#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Game/Controllers/Menu/Button.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#403#404#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,22 +91,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Engine/Game/RenderEvent.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Game/TickEvent.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Game.java" />
-        <option value="$PROJECT_DIR$/src/Engine/GameController.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Game/LoopThreadEvent.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Game/Component.java" />
-        <option value="$PROJECT_DIR$/src/Patratel.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Game/LoopThreadCallbacks.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Game/LoopThread.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Camera.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Game/Window.java" />
-        <option value="$PROJECT_DIR$/src/Engine/EngineThread.java" />
         <option value="$PROJECT_DIR$/src/Engine/Core/World.java" />
         <option value="$PROJECT_DIR$/src/Engine/Game/EngineController.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Core/Window.java" />
         <option value="$PROJECT_DIR$/src/Engine/Objects/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/Engine/Forms/ObjectRectangle.java" />
         <option value="$PROJECT_DIR$/src/Engine/Game/Object.java" />
@@ -136,7 +105,6 @@
         <option value="$PROJECT_DIR$/src/XAxis.java" />
         <option value="$PROJECT_DIR$/src/YAxis.java" />
         <option value="$PROJECT_DIR$/src/Engine/Forms/WorldLine.java" />
-        <option value="$PROJECT_DIR$/src/Engine/Forms/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/Engine/Forms/Line.java" />
         <option value="$PROJECT_DIR$/src/BiAxis.java" />
         <option value="$PROJECT_DIR$/src/NBiAxis.java" />
@@ -148,7 +116,6 @@
         <option value="$PROJECT_DIR$/src/Engine/Core/Camera.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Engine/EngineThreadCallback.java" />
-        <option value="$PROJECT_DIR$/src/Engine/EngineController.java" />
         <option value="$PROJECT_DIR$/src/Engine/Core/Component.java" />
         <option value="$PROJECT_DIR$/src/Image.java" />
         <option value="$PROJECT_DIR$/src/Engine/Image.java" />
@@ -157,8 +124,24 @@
         <option value="$PROJECT_DIR$/src/TLObj.java" />
         <option value="$PROJECT_DIR$/src/BRObj.java" />
         <option value="$PROJECT_DIR$/src/BLObj.java" />
-        <option value="$PROJECT_DIR$/src/Game/Controllers/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Core/GraphicFont.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Core/Window.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Forms/Rectangle.java" />
+        <option value="$PROJECT_DIR$/src/Game/Controllers/Menu/AbstractButton.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Animation/Color.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Animation/Type.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Animation/Types/Linear.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Animation/Animation.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Animation/Types/EaseInOut.java" />
+        <option value="$PROJECT_DIR$/src/Engine/Animation/ColorAnimation.java" />
+        <option value="$PROJECT_DIR$/src/Game/Controllers/Menu/ButtonClickEvent.java" />
         <option value="$PROJECT_DIR$/src/Game/Controllers/Menu/Button.java" />
+        <option value="$PROJECT_DIR$/src/Game/Controllers/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/Game/Controllers/Menu/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Game/Menu/Button.java" />
+        <option value="$PROJECT_DIR$/src/Game/Menu/ButtonClickEvent.java" />
+        <option value="$PROJECT_DIR$/src/Game/Menu/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Engine/EngineController.java" />
       </list>
     </option>
   </component>
@@ -190,13 +173,7 @@
             <path>
               <item name="java-game" type="58d84e3e:PackageViewProjectNode" />
               <item name="java-game" type="616d4139:PackageViewModuleNode" />
-              <item name="Engine" type="1f31426a:PackageElementNode" />
-              <item name="Core" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="java-game" type="58d84e3e:PackageViewProjectNode" />
-              <item name="java-game" type="616d4139:PackageViewModuleNode" />
-              <item name="Game.Controllers" type="1f31426a:PackageElementNode" />
+              <item name="Game.Menu" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -245,7 +222,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29297996" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31017193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -316,65 +293,12 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GameWindow.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Game/LoopThread.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/EngineLoop.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Game/LoopThreadCallbacks.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Camera.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="50" lean-forward="true" selection-end-line="61" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine/Game/EngineController.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Game/Window.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Core/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2287#2288#0" expanded="true" />
-            <element signature="e#2341#2342#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine/Game/Component.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Objects/Rectangle.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Forms/ObjectRectangle.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/Game/Object.java" />
-    <entry file="file://$PROJECT_DIR$/src/FPS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Engine/Forms/Object.java" />
     <entry file="file://$PROJECT_DIR$/src/Engine/Geometry/Rectangle.java" />
     <entry file="file://$PROJECT_DIR$/src/Engine/Geometry/Line.java" />
     <entry file="file://$PROJECT_DIR$/src/Engine/Geometry/Point.java" />
     <entry file="file://$PROJECT_DIR$/src/Patratel.java" />
     <entry file="file://$PROJECT_DIR$/src/Engine/Forms/Point.java" />
-    <entry file="file://$PROJECT_DIR$/src/Engine/EngineThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Engine/Core/World.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -435,13 +359,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine/Forms/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="118" column="12" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -547,16 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine/Core/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Engine/Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -607,26 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine/EngineController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="85" selection-start-line="85" selection-end-line="89" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine/Core/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BLObj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -637,27 +524,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Controllers/Menu/Button.java">
+    <entry file="file://$PROJECT_DIR$/src/Engine/Core/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        <state relative-caret-position="270">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#2339#2340#0" expanded="true" />
+            <element signature="e#2373#2374#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Controllers/MenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/Engine/Core/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        <state relative-caret-position="255">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#274#282#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/Forms/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="107" column="79" selection-start-line="107" selection-start-column="79" selection-end-line="107" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Controllers/Menu/AbstractButton.java" />
+    <entry file="file://$PROJECT_DIR$/src/Engine/Animation/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/Animation/Color.java" />
+    <entry file="file://$PROJECT_DIR$/src/Engine/Core/GraphicFont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/Animation/Animation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/EngineThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/Animation/Types/Linear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/Animation/Types/EaseInOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/Animation/ColorAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding>
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#2602#2603#0" expanded="true" />
+            <element signature="e#2669#2670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/Core/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Controllers/Menu/Button.java" />
+    <entry file="file://$PROJECT_DIR$/src/Game/Controllers/Menu/ButtonClickEvent.java" />
+    <entry file="file://$PROJECT_DIR$/src/Game/Controllers/MenuController.java" />
+    <entry file="file://$PROJECT_DIR$/src/Game/Controllers/Menu/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/Game/MenuController.java" />
+    <entry file="file://$PROJECT_DIR$/src/Game/Menu/ButtonClickEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine/EngineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Menu/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Menu/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

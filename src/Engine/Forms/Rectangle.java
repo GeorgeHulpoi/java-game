@@ -86,13 +86,26 @@ public class Rectangle
 
     public static boolean inside(Rectangle r, Point p)
     {
-        int x1 = r.getX();
-        int y1 = r.getY();
+        int x = r.getX();
+        int y = r.getY();
 
-        int _x1 = x1 + r.getWidth();
-        int _y1 = y1 - r.getHeight();
+        int _x = x + r.getWidth();
+        int _y = y - r.getHeight();
 
-        return (p.getX() >= x1 && p.getX() <= _x1 && p.getY() <= y1 && p.getY() >= _y1);
+        return (p.getX() >= x && p.getX() <= _x && p.getY() <= y && p.getY() >= _y);
+    }
+
+    // Y-ul nu se mai scade, se aduna
+    // Cordonatele sunt 0,0 si 640,640 deci yeap, nu mai suntem in sistemul X,Y clasic
+    public static boolean screenInside(Rectangle r, Point p)
+    {
+        int x = r.getX();
+        int y = r.getY();
+
+        int _x = x + r.getWidth();
+        int _y = y + r.getHeight();
+
+        return (p.getX() >= x && p.getX() <= _x && p.getY() >= y && p.getY() <= _y);
     }
 
     public static boolean intersects(Line l, Rectangle r)

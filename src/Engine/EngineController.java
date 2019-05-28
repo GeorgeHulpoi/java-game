@@ -8,7 +8,7 @@ import Engine.Forms.Rectangle;
 import Engine.Forms.WorldLine;
 import Engine.Forms.WorldObject;
 import Engine.Forms.WorldPolygon;
-import Game.Controllers.MenuController;
+import Game.Menu.Controller;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -21,7 +21,7 @@ public class EngineController implements EngineThreadCallback
     private Window window;
     private World world;
     private Camera camera;
-    private MenuController menu;
+    private Game.Menu.Controller menu;
     //private ArrayList<Component> components = new ArrayList<Component>();
 
     public static EngineController getInstance()
@@ -31,7 +31,7 @@ public class EngineController implements EngineThreadCallback
             instance = new EngineController();
             instance.thread = new EngineThread(instance);
             instance.window = new Window();
-            instance.menu = new MenuController();
+            instance.menu = new Game.Menu.Controller();
         }
         return instance;
     }
@@ -66,7 +66,7 @@ public class EngineController implements EngineThreadCallback
         return this.window;
     }
 
-    public MenuController getMenu()
+    public Game.Menu.Controller getMenu()
     {
         return this.menu;
     }
