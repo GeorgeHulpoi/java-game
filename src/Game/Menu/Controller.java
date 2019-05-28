@@ -5,6 +5,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import Engine.EngineController;
 import Engine.Image;
 import Game.Menu.Button;
 
@@ -12,10 +13,13 @@ public class Controller
 {
     private ArrayList<Button> buttons = new ArrayList<>();
     private Image background;
-    private int selected = 0;
+
+    private boolean SHOW_NEW_GAME = false;
+    private boolean SHOW_RESUME = false;
 
     private Button EXIT;
     private Button NEW_GAME;
+    private Button RESUME;
 
     final static int BTN_HEIGHT = 28;
     final static int BTN_WIDTH = 190;
@@ -35,14 +39,44 @@ public class Controller
 
         EXIT = new Button("Exit",  BTN_WIDTH, BTN_HEIGHT);
         EXIT.eventListener = () -> { ExitCallback(); };
-        EXIT.setVisible(true);
 
         NEW_GAME = new Button("New Game", BTN_WIDTH, BTN_HEIGHT);
         NEW_GAME.eventListener = () -> { NewGameCallback(); };
-        NEW_GAME.setVisible(true);
 
-        this.buttons.add(NEW_GAME);
-        this.buttons.add(EXIT);
+        RESUME = new Button("Resume", BTN_WIDTH, BTN_HEIGHT);
+        RESUME.eventListener = () -> { ResumeCallback(); };
+
+        SHOW_NEW_GAME = true;
+
+        show();
+    }
+
+    public void hide()
+    {
+        EXIT.setVisible(false);
+        NEW_GAME.setVisible(false);
+        RESUME.setVisible(false);
+
+        buttons.clear();
+
+        EngineController.getInstance().getWindow().getCanvas().setCursor(null);
+    }
+
+    public void show()
+    {
+        if (SHOW_NEW_GAME)
+        {
+            NEW_GAME.setVisible(true);
+            buttons.add(NEW_GAME);
+        }
+        if (SHOW_RESUME)
+        {
+            RESUME.setVisible(true);
+            buttons.add(RESUME);
+        }
+
+        EXIT.setVisible(true);
+        buttons.add(EXIT);
 
         centerButtons();
     }
@@ -63,7 +97,16 @@ public class Controller
 
     private void NewGameCallback()
     {
-        System.out.println("New Game clicked");
+        EngineController.getInstance().getGame().loaded = true;
+        SHOW_NEW_GAME = false;
+        SHOW_RESUME = true;
+        this.hide();
+    }
+
+    private void ResumeCallback()
+    {
+        EngineController.getInstance().getGame().paused = false;
+        hide();
     }
 
     private void ExitCallback()

@@ -2,12 +2,11 @@ package Engine.Core;
 
 import Engine.EngineController;
 import Engine.Forms.Rectangle;
-import Engine.Core.Window;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
-public class Camera extends Rectangle //implements KeyListener
+public class Camera extends Rectangle
 {
     private boolean UP_PRESSED = false;
     private boolean LEFT_PRESSED = false;
@@ -18,66 +17,57 @@ public class Camera extends Rectangle //implements KeyListener
     {
         super(x, y, width, height);
 
-        //EngineController.getInstance().getWindow().addKeyListener(this);
+        // Luata de pe net.. exista o problema la focusare si asta e cam singura solutie pentru Key Listener
+        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(
+            (e) ->
+            {
+                OnKeyEvent(e);
+                return false;
+            }
+        );
     }
 
-   /* public void keyTyped(KeyEvent e)
+    private void OnKeyEvent(KeyEvent e)
     {
-
-    }
-
-    public void keyPressed(KeyEvent e)
-    {
-        int keyCode = e.getKeyCode();
-
-        // arrow up
-        if (keyCode == 38)
+        if (e.getID() == KeyEvent.KEY_PRESSED)
         {
-            UP_PRESSED = true;
+            if ((int) e.getKeyChar() == 119)
+            {
+                UP_PRESSED = true;
+            }
+            if ((int) e.getKeyChar() == 97)
+            {
+                LEFT_PRESSED = true;
+            }
+            if ((int) e.getKeyChar() == 115)
+            {
+                DOWN_PRESSED = true;
+            }
+            if ((int) e.getKeyChar() == 100)
+            {
+                RIGHT_PRESSED = true;
+            }
         }
-        // arrow left
-        else if (keyCode == 37)
+        else if (e.getID() == KeyEvent.KEY_RELEASED)
         {
-            LEFT_PRESSED = true;
+            if ((int) e.getKeyChar() == 119)
+            {
+                UP_PRESSED = false;
+            }
+            if ((int) e.getKeyChar() == 97)
+            {
+                LEFT_PRESSED = false;
+            }
+            if ((int) e.getKeyChar() == 115)
+            {
+                DOWN_PRESSED = false;
+            }
+            if ((int) e.getKeyChar() == 100)
+            {
+                RIGHT_PRESSED = false;
+            }
         }
-        // arrow down
-        else if (keyCode == 40)
-        {
-            DOWN_PRESSED = true;
-        }
-        // arrow right
-        else if (keyCode == 39)
-        {
-            RIGHT_PRESSED = true;
-        }
-
         update();
-    }
-
-    public void keyReleased(KeyEvent e)
-    {
-        int keyCode = e.getKeyCode();
-
-        // arrow up
-        if (keyCode == 38)
-        {
-            UP_PRESSED = false;
-        }
-        // arrow left
-        else if (keyCode == 37)
-        {
-            LEFT_PRESSED = false;
-        }
-        // arrow down
-        else if (keyCode == 40)
-        {
-            DOWN_PRESSED = false;
-        }
-        // arrow right
-        else if (keyCode == 39)
-        {
-            RIGHT_PRESSED = false;
-        }
     }
 
     public void update()
@@ -110,5 +100,5 @@ public class Camera extends Rectangle //implements KeyListener
             x = tx;
             y = ty;
         }
-    }*/
+    }
 }

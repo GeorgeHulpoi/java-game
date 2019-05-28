@@ -1,27 +1,32 @@
+package Game;
+
 import Engine.Core.Camera;
 import Engine.EngineController;
 import Engine.Forms.WorldObject;
+import Game.Image;
 
 import java.awt.*;
 import java.io.IOException;
 
-public class ImgObj extends WorldObject
+public class TRObj extends WorldObject
 {
     private int screen_x;
     private int screen_y;
-    private Image img;
+    private Game.Image img;
 
-    public ImgObj()
+    public TRObj()
     {
-        width = 184;
-        height = 157;
-        x = -width/2;
-        y = height/2;
+        width = 173;
+        height = 26;
+
+        x = 640*3/2 - 15 - width;
+        y = 640*3/2 - 15;
+
         try
         {
-            img = new Image("./assets/images/logo.png");
+            img = new Image("./assets/images/top_right.png");
         }
-        catch(IOException e)
+        catch (IOException e)
         {
 
         }
@@ -31,15 +36,10 @@ public class ImgObj extends WorldObject
     public void render(Graphics g)
     {
         Camera cam = EngineController.getInstance().getCamera();
+
         screen_x = x - cam.getX();
         screen_y = cam.getY() - y;
 
         g.drawImage(this.img.getBufferedImage(), screen_x, screen_y, width, height, null);
-    }
-
-    @Override
-    public void tick()
-    {
-
     }
 }

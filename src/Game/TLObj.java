@@ -1,26 +1,28 @@
+package Game;
+
 import Engine.Core.Camera;
 import Engine.EngineController;
 import Engine.Forms.WorldObject;
+import Game.Image;
 
 import java.awt.*;
 import java.io.IOException;
 
-public class BLObj extends WorldObject
+public class TLObj extends WorldObject
 {
     private int screen_x;
     private int screen_y;
-    private Image img;
+    private Game.Image img;
 
-    public BLObj()
+    public TLObj()
     {
-        width = 222;
+        x = -640*3/2 + 15;
+        y = 640*3/2 - 15;
+        width = 148;
         height = 26;
 
-        x = -640*3/2 + 15;
-        y = -640*3/2 + 15 + height;
-
         try {
-            img = new Image("./assets/images/bottom_left.png");
+            img = new Image("./assets/images/top_left.png");
         }
         catch (IOException e) {}
     }

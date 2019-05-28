@@ -22,6 +22,7 @@ public class Window extends JFrame
         this.setPreferredSize(new Dimension(640 + 4, 640 + 28));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
+        this.setFocusable(true); // Fara asta face figuri KeyListenerul
         this.setLayout(new BorderLayout());
         /* The pack method sizes the frame so that all its contents are at or above their preferred sizes.
          * An alternative to pack is to establish a frame size explicitly by calling setSize or setBounds

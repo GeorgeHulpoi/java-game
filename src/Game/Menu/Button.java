@@ -166,7 +166,7 @@ public class Button extends Component implements MouseMotionListener, MouseListe
 
     public void mouseClicked(MouseEvent e)
     {
-        if (cursorInside)
+        if (cursorInside && isVisible())
         {
             this.OnClick();
         }

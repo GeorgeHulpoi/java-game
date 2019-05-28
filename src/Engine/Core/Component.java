@@ -21,12 +21,12 @@ public class Component
 
     public Component()
     {
-        //EngineController.getInstance().AddComponent(this);
+        //EngineController.getInstance().getGame().AddComponent(this);
     }
 
     public void destroy()
     {
-        //EngineController.getInstance().RemoveComponent(this);
+        //EngineController.getInstance().getGame().RemoveComponent(this);
     }
 
     public boolean isWorldObject()

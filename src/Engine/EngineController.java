@@ -8,7 +8,6 @@ import Engine.Forms.Rectangle;
 import Engine.Forms.WorldLine;
 import Engine.Forms.WorldObject;
 import Engine.Forms.WorldPolygon;
-import Game.Menu.Controller;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -18,10 +17,11 @@ public class EngineController implements EngineThreadCallback
 {
     private static EngineController instance = null;
     private EngineThread thread;
-    private Window window;
+    private Window window = null;
     private World world;
     private Camera camera;
     private Game.Menu.Controller menu;
+    private Game.Controller game;
     //private ArrayList<Component> components = new ArrayList<Component>();
 
     public static EngineController getInstance()
@@ -32,6 +32,7 @@ public class EngineController implements EngineThreadCallback
             instance.thread = new EngineThread(instance);
             instance.window = new Window();
             instance.menu = new Game.Menu.Controller();
+            instance.game = new Game.Controller();
         }
         return instance;
     }
@@ -71,6 +72,8 @@ public class EngineController implements EngineThreadCallback
         return this.menu;
     }
 
+    public Game.Controller getGame() { return this.game; }
+
     /*public boolean AddComponent(Component component)
     {
         return this.components.add(component);
@@ -102,7 +105,21 @@ public class EngineController implements EngineThreadCallback
             g.setColor(Color.BLACK);
             g.fillRect(0, 0, this.window.getScreenSize().width, this.window.getScreenSize().height);
 
-            this.menu.render(g);
+            if (this.game.isLoaded())
+            {
+                if (this.game.paused)
+                {
+                    this.menu.render(g);
+                }
+                else
+                {
+                    this.game.render(g);
+                }
+            }
+            else
+            {
+                this.menu.render(g);
+            }
 
             /*for (int i = 0; i < this.components.size(); ++i)
             {
