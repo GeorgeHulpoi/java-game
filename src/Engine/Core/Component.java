@@ -19,6 +19,16 @@ public class Component
         return this.visible;
     }
 
+    public int getWidth()
+    {
+        return width;
+    }
+
+    public int getHeight()
+    {
+        return height;
+    }
+
     public Component()
     {
         //EngineController.getInstance().getGame().AddComponent(this);

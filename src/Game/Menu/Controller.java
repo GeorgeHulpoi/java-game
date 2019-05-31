@@ -7,8 +7,6 @@ import java.util.ArrayList;
 
 import Engine.EngineController;
 import Engine.Image;
-import Game.Menu.Button;
-
 public class Controller
 {
     private ArrayList<Button> buttons = new ArrayList<>();
@@ -97,7 +95,7 @@ public class Controller
 
     private void NewGameCallback()
     {
-        EngineController.getInstance().getGame().loaded = true;
+        EngineController.getInstance().getGame().load(1);
         SHOW_NEW_GAME = false;
         SHOW_RESUME = true;
         this.hide();
